@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "ba27c17a-9a2b-454e-9127-7265883490ec",
+		"name": "Generated Collection",
+		"description": "This is a simple API that responds with 'Hello Universe!' at the root endpoint.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "36170423-ba27c17a-9a2b-454e-9127-7265883490ec"
+	},
+	"item": [
+		{
+			"name": "/",
+			"item": [
+				{
+					"name": "Get a greeting message",
+					"id": "6c3ac7b3-a672-469c-a244-8271a256d29f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "text/plain"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								""
+							]
+						},
+						"description": "Responds with 'Hello Universe!' message."
+					},
+					"response": [
+						{
+							"id": "53ddb389-3b7c-4b01-b9de-8cd14ce12a66",
+							"name": "A successful response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "text/plain"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain"
+								}
+							],
+							"cookie": [],
+							"body": "<string>"
+						}
+					]
+				}
+			],
+			"id": "a411c518-dede-4ff0-9915-516b4ec0b796"
+		}
+	],
+	"variable": [
+		{
+			"id": "9c381659-3439-490a-ba89-2d4753510dc8",
+			"key": "baseUrl",
+			"value": "http://localhost:3000"
+		}
+	]
+}

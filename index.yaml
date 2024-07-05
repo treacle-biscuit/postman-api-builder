@@ -1,0 +1,22 @@
+openapi: 3.0.0
+info:
+  title: Example Express API
+  description: This is a simple API that responds with 'Hello Universe!' at the root endpoint.
+  version: 1.0.0
+servers:
+  - url: http://localhost:3000
+    description: Local server
+
+paths:
+  /:
+    get:
+      summary: Get a greeting message
+      description: Responds with 'Hello Universe!' message.
+      responses:
+        '200':
+          description: A successful response
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: Hello Universe!
