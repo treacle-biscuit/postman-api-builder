@@ -12,6 +12,32 @@
 			"item": [
 				{
 					"name": "Get a greeting message",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "50f8309a-10bc-462e-9578-fa88b2f3be06",
+								"exec": [
+									"pm.test(\"Response status code is 200\", function () {",
+									"  pm.response.to.have.status(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"  pm.expect(pm.response.responseTime).to.be.below(200);",
+									"});",
+									"",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Hello Universe!\");",
+									"});",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "6c3ac7b3-a672-469c-a244-8271a256d29f",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
